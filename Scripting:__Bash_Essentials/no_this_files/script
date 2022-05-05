@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo 'Input name_surname'
+read NAME
+
+source ~fank/vars/vars
+#rm -r $NAME
+mkdir $NAME
+
+touch $NAME/$FILE
