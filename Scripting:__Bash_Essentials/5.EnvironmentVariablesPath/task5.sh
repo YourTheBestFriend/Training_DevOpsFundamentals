@@ -1,4 +1,5 @@
 #!/bin/bash 
+mkdir homework # create homework folder in your user's home folder
 SURNAME="Goncharov" # Create variable
 # Variable
 export SURNAME=$SURNAME # create SURNAME environment variable equal to your surname
