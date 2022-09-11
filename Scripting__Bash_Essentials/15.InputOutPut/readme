@@ -1,0 +1,23 @@
+1. Data Streams (Потоки данных) - способ передачи информации между двумя точками.
+2. В Linux есть возможность как принимать, так и передовать текстовые или байтовые данные, через end points (точки ввода-вывода)
+    - stdin (standart input (ожидает данные на вход)) file descriptor = 0 -> /dev/stdin
+    - stdout (standart output (передает данные)) file descriptor = 1 -> /dev/stdout
+    - stderr (standart error, - тоже самое что и stdout только предназначен для передачи данных об ошибках) file descriptor = 2 -> /dev/stderr
+2. Data Redirect (перенаправление данных) с помощью > >> and < <<
+3. Heredoc (Если надо перенаправить не одну, !!! Несколько строк)
+DELEMITER - метка
+start DELEMITER == end DELEMITER
+
+`DELEMITER` != DELEMITER - не будет работать
+[-] - будет игнорировать все символы табуляции
+[COMMAND] <<[-]`DELEMITER` 
+    line1
+    line2
+DELEMITER
+
+command > /dev/null 2>&1   - если не хотим ВИДЕТЬ перенаправление
+
+
+2> это перенавравление плохих ответов
+
+/dev/null девайс null (ни какой, в никуда)
